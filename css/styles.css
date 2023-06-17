@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root {
+    /* Font setting for the entire document */
+    font-family: 'Roboto', sans-serif;
+    /* Color theme variables for the document */
+    --blue: rgba(129, 149, 196, 1.0);
+    --magenta: rgba(172, 177, 214, 1.0);
+    --background: rgba(219, 223, 234, 1.0);
+    --text-color: rgba(254, 234, 210, 1.0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Setting default margin and padding to 0 and background color */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: rgb(43, 156, 226);
+}
+
+.span-blue {
+    color: rgb(43, 156, 226);
+    font-weight: 800;
+}
+
+.spacer {
+    height: 100px;
+    width: 100%;
+}
+
+.home-body .profile-body {
+    /* Setting 100% viewport height and width to .home-body .profile-body class */
+    height: 100vh;
+    width: 100%;
+}
+
+.project-body {
+    height: 80vh;
+    width: 100%;
+}
+
+.home-body {
+    position: relative;
+}
+
+.impressum {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--blue);
+    
+}
+
+.navigation-container {
+    /* Setting height and width of the navigation container. Making it sticky with fixed position */
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+
+.navigation {
+    /* Styling the navigation bar */
+    background-color: rgba(129, 149, 196, 0.5);
+    height: 40px;
+    margin: 10px 20px 0px 20px;
+    position: relative;
+    border-radius: 7px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 01);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Making sure the content is laid out in a row, and spaced out equally */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.nav-name-container {
+    /* Styling the name container within the navigation */
+    height: 80%;
+    width: 126px;
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 10px;
+    border-radius: 5px;
+}
+
+.nav-name-container:hover {
+    /* Hover effect for name container */
+    background-color: var(--magenta);
+    box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.3);
+}
+
+.navigation-name {
+    /* Styling the navigation name links */
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navigation-stack {
+    /* Styling the stack container in the navigation */
+    display: flex;
+    align-items: center;
+    height: 80%;
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.navigation-stack a {
+    /* Styling the links within the stack container */
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.stack-container {
+    /* Styling the stack container */
+    display: flex;
+    height: 80%;
+    width: auto;
+    background-color: var(--blue);
+    padding: 0 5px 0 5px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.stack-container:hover {
+    /* Hover effect for the stack container */
+    background-color: var(--magenta);
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.blob {
+    text-align: center;
+    display: block;
+    width: 600;
+    height: 300;
+}
+
+@media only screen and (max-width: 600px) {
+    .blob {
+        text-align: end;
+        display: block;
+        width: 400px;
+        height: 200px;
+    }
+
+    .heart-container-left {
+        position: absolute;
+        width: 300px !important;
+        height: 130px !important;
+        left: 20px;
+        top: 80% !important;
+    }
+
+    .heart-container-right {
+        position: absolute;
+        width: 300px !important;
+        height: 130px !important;
+        right: 20px;
+        top: 80% !important;
+    }
+
+
+    #visual {
+        position: absolute;
+        max-width: 200px;
+        max-height: 200px;
+        bottom: 10%;
+        right: 50px;
+    }
+    .impressum {
+        margin-top: 600px;
+    }
+
+}
+
+
+.spotify {
+    position: absolute;
+    width: 250px;
+    height: 88px;
+    bottom: -40px;
+    left: 165px;
+    transform: rotate(2deg);
+    z-index: 1;
+    opacity: .5 !important;
+}
+
+.jl-image {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.tech-stack-body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.tech-container {
+    height: 100px;
+    width: 100px;
+    gap: 1px;
+    background: rgba(129, 149, 196, 0.4);
+    border-radius: 16px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.356);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(153, 168, 188, 0.3);
+}
+
+.tech {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 390px;
+    width: 390px;
+    gap: 10px;
+    z-index: 2;
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.center-content-row {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+}
+
+.image-boarder {
+    height: 70px;
+    width: 70px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(129, 149, 196, 0.4);
+    border-radius: 16px;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(113, 138, 170, 1);
+}
+
+.tech-container :hover {
+    background-color: rgba(129, 149, 196, 0.4);
+    border-radius: 16px;
+}
+
+
+.img-center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-icon {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heart-container-right {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    top: 50%;
+    right: 30px;
+}
+
+.heart-container-left {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    left: 20px;
+    top: 50%;
+}
+
+.center-content-project {
+    gap: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+}
+
+.card-project {
+    background-color: rgba(129, 149, 196, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 01);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 2rem;
+    transition: 1000ms;
+    transform-style: preserve-3d;
+}
+
+.card-container{
+    height: 300px;
+    width: 240px;
+    perspective: 500px;
+}
+
+.card-container:hover >.card-project  {
+    transform: rotateY(180deg);
+}
+.card-project:hover >.card-front  {
+visibility: hidden;
+}
+.card-project:hover >.card-back  {
+    visibility: visible;
+}
+
+.card-front, .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.card-front a {
+    text-align: center;
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    line-height: 3rem;
+    color: rgb(43, 156, 226);
+}
+
+
+.project-content-front {
+    width: 90%;
+    height: 220px;
+    background-color: rgba(129, 149, 196, 0.4);
+    border-radius: 1rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back {
+    background-color: rgba(54, 52, 52, 0.629);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 01);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    transform: rotateY(180deg);
+    visibility: hidden;
+}
+
+.card-back a {
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 3rem;
+    color: rgb(151, 197, 226);
+    font-weight: 900;
+}
+
+.card-back p {
+    text-align: center;
+    display: block;
+    font-size: 0.8rem;
+    text-decoration: none;
+    line-height: 1rem;
+    color: rgb(132, 160, 178);
+    font-weight: 900;
+}
+
+.project-button-container {
+    display: flex;
+    flex: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: end;
+    margin-bottom: 10px;
+}
+
+.project-button {
+    width: 30%;
+    height: 40px;
+    background-color: rgba(54, 52, 52, 0.629);
+    border-radius: 1rem;
+}
+
+.project-play-button {
+    width: 30%;
+    height: 40px;
+    background-color: rgba(154, 85, 85, 0.629);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-play-button:hover {
+    width: 30%;
+    height: 40px;
+    background-color: rgba(99, 70, 70, 0.629);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.impressum-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.impressum-content-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    gap: 40px;
+
+}
+
+.center-content-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+/*!      Game Css       */
+
+#game {
+    width: 900px;
+    height: 500px;
+    background-image: url('../assets/game_assets/game_background.gif');
+    background-size: contain;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 7px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 01);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#pipe {
+    width: 100px;
+    height: 200px;
+    background-image: url('../assets/game_assets/tree_up.png');
+    background-size: cover;
+    position: relative;
+    left: 900px;
+    animation: pipe 2s infinite linear;
+    transform: rotateX(180deg);
+    display: block;
+}
+#pipe-up {
+    width: 100px;
+    height: 400px;
+    background-image: url('../assets/game_assets/tree_up.png');
+    background-size: cover;
+    position: relative;
+    margin-top: 200px;
+    left: 900px;
+    animation: pipe 2s infinite linear;
+    display: block;
+}
+
+@keyframes pipe {
+    0% {
+        left: 900px;
+    }
+    100%{
+        left: -50px;
+    }
+}
+
+#hole {
+    width: 100px;
+    height: 200px;
+    background-color:var(--background);    
+    position: relative;
+    left: 500px;
+    top: 0px;
+    animation: pipe 2s infinite linear;
+}
+#gyro {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    animation: gyro-fly .8s infinite;
+    image-rendering: auto;
+    background-size: cover;
+}
+
+@keyframes gyro-fly {
+    25% {
+        background-image: url('../assets/fly_animation/fly\(1\).png');
+    }
+    50% {
+        background-image: url('../assets/fly_animation/fly\(2\).png');
+    }
+    75% {
+        background-image: url('../assets/fly_animation/fly\(3\).png');
+    }
+    100% {
+        background-image: url('../assets/fly_animation/fly\(4\).png');
+    }    
+}
+
+.game-title{
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-size: 3em;
+    color: rgb(43, 156, 226);
+    background-color: rgba(129, 149, 196, 0.5);
+    
+    position: relative;
+    border-radius: 7px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 01);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
