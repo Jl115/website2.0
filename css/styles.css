@@ -160,7 +160,7 @@ h1 {
     height: 300;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .blob {
         text-align: end;
         display: block;
@@ -200,7 +200,7 @@ h1 {
     }
     
 }
-@media only screen and (max-width: 470px) {
+@media (max-width: 470px) {
     .jl-image {
         display: none !important;
     }
@@ -253,10 +253,13 @@ h1 {
         display: none !important;
     }
     .spacer-hide {
-        height: 700px !important;
+        height: 100px !important;
+    }
+    .project-body {
+        height: 200vh;
     }
 }
-@media only screen and (max-width: 1100px) {
+@media (max-width: 1100px) {
 .spacer-hide{
     height: 200px;
     width: 100%;
@@ -555,6 +558,21 @@ visibility: hidden;
     height: 60px; 
     background-color: var(--magenta); 
     border-radius: 1rem;
+}
+
+/*! scroll animation */
+
+.hidden{
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-100%);
+    transition: all 1.2s;
+}
+
+.see {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
 
 /*!      Game Css       */
